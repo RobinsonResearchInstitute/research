@@ -29,7 +29,11 @@ function renderPage(num) {
   pdfDoc.getPage(num).then(function(page) {
     var viewport = page.getViewport({scale: 1});
     var h1 = window.innerHeight*0.9;
+    var w1 = window.innerWidth*0.9;
+    if(h1<w1)
     scale = h1/viewport.height*zoom;
+    else
+    scale = w1/viewport.width*zoom;
     viewport = page.getViewport({scale:scale});
     canvas.height = viewport.height;
     canvas.width = viewport.width;
