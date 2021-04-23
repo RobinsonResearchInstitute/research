@@ -9,6 +9,7 @@ var pdfjsLib = window['pdfjs-dist/build/pdf'];
 // The workerSrc property shall be specified.
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://unpkg.com/pdfjs-dist@2.7.570/build/pdf.worker.js';
 
+
 var pdfDoc = null,
     pageNum = 1,
     pageRendering = false,
