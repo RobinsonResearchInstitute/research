@@ -1,0 +1,64 @@
+<!doctype html>
+  
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robinson Research Institute Brochure</title>
+   <!--<script
+   src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js">
+  </script>-->
+  <script src="https://unpkg.com/pdfjs-dist@2.7.570/build/pdf.min.js"></script>
+  <style>
+      #container {
+        overflow: auto;
+  background: #333;
+    text-align: center;
+    padding:5px;
+    height:90vh;
+}
+
+.controls{
+  margin:5px;
+  font-family:  'Roboto','Source Sans Pro','Open Sans','Lato',Helvetica, Arial, sans-serif;
+}
+
+.controls button{
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color:#333; /* Set a background color */
+  color: white; /* Text color */
+  padding-top: 5px; /* Some padding */
+  padding-bottom: 5px;
+  padding-left:10px;
+  padding-right:10px;
+  border-radius: 0px; /* Rounded corners */
+  font-size: 14px; /* Increase font size */
+  width:80px;
+}
+
+.controls button:hover {
+  background-color: rgb(0,71,48); /* Add a dark-grey background on hover */
+}
+  </style>
+</head>
+<body>
+   
+
+    <div class="controls">
+      <button id="prev">Previous</button>
+      <button id="next" autofocus>Next</button>
+      &nbsp; &nbsp;
+      <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+      &nbsp; &nbsp;
+      <button id="zout">Zoom out</button>
+      <button id="zin">Zoom in</button>
+      &nbsp; &nbsp;
+      <a id="pdf" href="RobinsonResearchInstitute.pdf">Download PDF</a>
+    </div>
+    <div id="container">
+    <canvas id="the-canvas"></canvas>
+  </div>
+    <script src="viewer.js"></script>
+</body>
+</html>
