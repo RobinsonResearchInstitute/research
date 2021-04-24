@@ -90,6 +90,7 @@ function onPrevPage() {
   queueRenderPage(pageNum);
 }
 document.getElementById('prev').addEventListener('click', onPrevPage);
+document.getElementById('prevarrow').addEventListener('click', onPrevPage);
 
 /**
  * Displays next page.
@@ -102,6 +103,7 @@ function onNextPage() {
   queueRenderPage(pageNum);
 }
 document.getElementById('next').addEventListener('click', onNextPage);
+document.getElementById('nextarrow').addEventListener('click', onNextPage);
 
 /**
  * Asynchronously downloads PDF.
@@ -121,14 +123,12 @@ window.onresize = function(event) {
 
 
 function onZoomIn(){
-  console.log('zoom in');
   zoom+=0.2;
   renderPage(pageNum);
 }
 document.getElementById('zin').addEventListener('click',onZoomIn);
 
 function onZoomOut(){
-  console.log('zoom out');
   zoom = Math.max(1,zoom-0.2);
   renderPage(pageNum);
 }
