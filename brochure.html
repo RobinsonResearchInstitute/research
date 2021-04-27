@@ -8,6 +8,7 @@
    <!--<script
    src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js">
   </script>-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://unpkg.com/pdfjs-dist@2.7.570/build/pdf.min.js"></script>
   <style>
       #container {
@@ -95,12 +96,25 @@ polyline {
 }
 
 
+.material-icons {
+  vertical-align:middle;
+  font-size:30px;
+ padding-right:10px;
+ color:#333;
+}
+
+.material-icons:hover {
+  color: rgb(0,71,48); /* Add a dark-grey background on hover */
+}
+
+
   </style>
 </head>
 <body>
    
 
     <div class="controls">
+      <a href="https://robinsonresearchinstitute.github.io/home"><i class="material-icons">home</i></a>
       <button id="prev">Previous</button>
       <button id="next" autofocus>Next</button>
       &nbsp; &nbsp;
